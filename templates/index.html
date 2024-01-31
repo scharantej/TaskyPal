@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Todo App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Todo Lists</h1>
+<ul>
+{% for list in lists %}
+<li><a href="{{ url_for('list', list_id=list.id) }}">{{ list.name }}</a></li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('login') }}">Login</a>
+</body>
+</html>
+
+
+
