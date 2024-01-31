@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ list_data.name }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>{{ list_data.name }}</h1>
+<ul>
+{% for item in items %}
+<li>{{ item.name }}</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('list', list_id=list_data.id) }}/edit">Edit</a>
+<a href="{{ url_for('list', list_id=list_data.id) }}/delete">Delete</a>
+</body>
+</html>
+
+
+
